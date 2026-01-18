@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" class="hero-nodes-svg">
+  <style>
+    .node {
+      fill: #1a1a1a;
+    }
+    .node-accent {
+      fill: #E0FF66;
+    }
+    .node-outline {
+      fill: none;
+      stroke: #1a1a1a;
+      stroke-width: 2;
+    }
+    .line {
+      stroke: rgba(26, 26, 26, 0.15);
+      stroke-width: 1.5;
+      fill: none;
+    }
+    .line-accent {
+      stroke: rgba(224, 255, 102, 0.4);
+      stroke-width: 2;
+      fill: none;
+    }
+    .pulse-dot {
+      fill: #E0FF66;
+    }
+
+    /* Floating animations */
+    @keyframes float1 {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(0, -12px); }
+    }
+    @keyframes float2 {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(8px, -8px); }
+    }
+    @keyframes float3 {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(-6px, -10px); }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.4; r: 4; }
+      50% { opacity: 1; r: 6; }
+    }
+    @keyframes dash {
+      to { stroke-dashoffset: -20; }
+    }
+
+    .group1 { animation: float1 6s ease-in-out infinite; }
+    .group2 { animation: float2 5s ease-in-out infinite 0.5s; }
+    .group3 { animation: float3 7s ease-in-out infinite 1s; }
+    .group4 { animation: float1 5.5s ease-in-out infinite 0.3s; }
+    .group5 { animation: float2 6.5s ease-in-out infinite 0.8s; }
+
+    .pulse-dot {
+      animation: pulse 2s ease-in-out infinite;
+    }
+    .pulse-dot:nth-of-type(2) { animation-delay: 0.3s; }
+    .pulse-dot:nth-of-type(3) { animation-delay: 0.6s; }
+    .pulse-dot:nth-of-type(4) { animation-delay: 0.9s; }
+
+    .line-animated {
+      stroke-dasharray: 8 12;
+      animation: dash 1.5s linear infinite;
+    }
+  </style>
+
+  <!-- Connection lines -->
+  <g class="connections">
+    <!-- Main structure lines -->
+    <line class="line" x1="250" y1="120" x2="150" y2="200"/>
+    <line class="line" x1="250" y1="120" x2="350" y2="180"/>
+    <line class="line" x1="150" y1="200" x2="100" y2="300"/>
+    <line class="line" x1="150" y1="200" x2="200" y2="320"/>
+    <line class="line" x1="350" y1="180" x2="400" y2="280"/>
+    <line class="line" x1="350" y1="180" x2="300" y2="300"/>
+    <line class="line" x1="200" y1="320" x2="300" y2="300"/>
+    <line class="line" x1="100" y1="300" x2="150" y2="400"/>
+    <line class="line" x1="400" y1="280" x2="380" y2="380"/>
+    <line class="line" x1="300" y1="300" x2="250" y2="400"/>
+    <line class="line" x1="200" y1="320" x2="250" y2="400"/>
+
+    <!-- Accent animated lines -->
+    <line class="line-accent line-animated" x1="250" y1="120" x2="350" y2="180"/>
+    <line class="line-accent line-animated" x1="350" y1="180" x2="300" y2="300"/>
+    <line class="line-accent line-animated" x1="300" y1="300" x2="250" y2="400"/>
+  </g>
+
+  <!-- Nodes -->
+  <!-- Top node -->
+  <g class="group1">
+    <circle class="node-accent" cx="250" cy="120" r="16"/>
+    <circle class="node" cx="250" cy="120" r="8"/>
+  </g>
+
+  <!-- Second level -->
+  <g class="group2">
+    <circle class="node-outline" cx="150" cy="200" r="12"/>
+    <circle class="node" cx="150" cy="200" r="6"/>
+  </g>
+
+  <g class="group3">
+    <circle class="node" cx="350" cy="180" r="14"/>
+  </g>
+
+  <!-- Third level -->
+  <g class="group4">
+    <circle class="node-outline" cx="100" cy="300" r="10"/>
+    <circle class="node" cx="100" cy="300" r="5"/>
+  </g>
+
+  <g class="group5">
+    <circle class="node-accent" cx="200" cy="320" r="10"/>
+  </g>
+
+  <g class="group2">
+    <circle class="node" cx="300" cy="300" r="12"/>
+  </g>
+
+  <g class="group1">
+    <circle class="node-outline" cx="400" cy="280" r="14"/>
+    <circle class="node-accent" cx="400" cy="280" r="7"/>
+  </g>
+
+  <!-- Bottom level -->
+  <g class="group3">
+    <circle class="node-outline" cx="150" cy="400" r="8"/>
+    <circle class="node" cx="150" cy="400" r="4"/>
+  </g>
+
+  <g class="group4">
+    <circle class="node" cx="250" cy="400" r="16"/>
+    <circle class="node-accent" cx="250" cy="400" r="8"/>
+  </g>
+
+  <g class="group5">
+    <circle class="node-outline" cx="380" cy="380" r="10"/>
+    <circle class="node" cx="380" cy="380" r="5"/>
+  </g>
+
+  <!-- Pulse dots on accent line -->
+  <circle class="pulse-dot" cx="300" cy="150" r="4"/>
+  <circle class="pulse-dot" cx="325" cy="240" r="4"/>
+  <circle class="pulse-dot" cx="275" cy="350" r="4"/>
+</svg>

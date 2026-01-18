@@ -791,3 +791,76 @@ html[data-theme="dark"] .service-detail-section:not(.ai-section) .has-light-gray
 html[data-theme="dark"] .service-detail-section:not(.ai-section) .feature-item {
     border-color: rgba(255, 255, 255, 0.1) !important;
 }
+
+/* Hero SVG Container */
+.hero-svg-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.hero-svg-container svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* SVG Floating animations */
+@keyframes hn-float1 {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(0, -12px); }
+}
+
+@keyframes hn-float2 {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(8px, -8px); }
+}
+
+@keyframes hn-float3 {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(-6px, -10px); }
+}
+
+@keyframes hn-pulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+}
+
+@keyframes hn-dash {
+    to { stroke-dashoffset: -20; }
+}
+
+.hn-float1 { animation: hn-float1 6s ease-in-out infinite; }
+.hn-float2 { animation: hn-float2 5s ease-in-out infinite 0.5s; }
+.hn-float3 { animation: hn-float3 7s ease-in-out infinite 1s; }
+.hn-pulse { animation: hn-pulse 2s ease-in-out infinite; }
+.hn-accent-line { animation: hn-dash 1.5s linear infinite; }
+
+/* Dark mode SVG adjustments */
+html[data-theme="dark"] .hero-svg-container .hn-node {
+    fill: #f5f5f5;
+}
+
+html[data-theme="dark"] .hero-svg-container .hn-node-outline {
+    stroke: #f5f5f5;
+}
+
+html[data-theme="dark"] .hero-svg-container .hn-line {
+    stroke: rgba(255, 255, 255, 0.15);
+}
+
+/* Responsive adjustments for hero columns */
+@media (max-width: 782px) {
+    .hero-section .wp-block-columns {
+        flex-direction: column-reverse;
+    }
+
+    .hero-section .wp-block-column {
+        flex-basis: 100% !important;
+    }
+
+    .hero-svg-container {
+        max-width: 350px;
+        margin-bottom: 40px;
+    }
+}

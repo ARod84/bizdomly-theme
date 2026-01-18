@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'BIZDOMLY_VERSION', '1.3.2' );
+define( 'BIZDOMLY_VERSION', '1.4.0' );
 define( 'BIZDOMLY_DIR', get_template_directory() );
 define( 'BIZDOMLY_URI', get_template_directory_uri() );
 
@@ -282,3 +282,4 @@ function bizdomly_enqueue_block_styles_css() {
 	wp_add_inline_style( 'global-styles', bizdomly_get_block_styles_css() );
 }
 add_action( 'wp_enqueue_scripts', 'bizdomly_enqueue_block_styles_css', 20 );
+

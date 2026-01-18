@@ -15,9 +15,72 @@
 		// Register ScrollTrigger plugin
 		gsap.registerPlugin(ScrollTrigger);
 
-		// Initialize stat counter animations
+		// Initialize animations
+		initHeroSvg();
 		initStatCounters();
 	});
+
+	/**
+	 * Animate hero SVG with line drawing.
+	 */
+	function initHeroSvg() {
+		const heroSvg = document.querySelector('.hero-svg-container');
+		if (!heroSvg) return;
+
+		const lines = heroSvg.querySelectorAll('.svg-line');
+		const accentLines = heroSvg.querySelectorAll('.svg-line-accent');
+		const nodes = heroSvg.querySelectorAll('.svg-node');
+
+		if (lines.length === 0) return;
+
+		// Set up lines for drawing animation
+		lines.forEach(function(line) {
+			var length = line.getTotalLength();
+			gsap.set(line, {
+				strokeDasharray: length,
+				strokeDashoffset: length
+			});
+		});
+
+		accentLines.forEach(function(line) {
+			var length = line.getTotalLength();
+			gsap.set(line, {
+				strokeDasharray: length,
+				strokeDashoffset: length
+			});
+		});
+
+		// Hide nodes initially
+		gsap.set(nodes, { opacity: 0, scale: 0 });
+
+		// Create timeline - plays on load with slight delay
+		var tl = gsap.timeline({ delay: 0.5 });
+
+		// Draw regular lines
+		tl.to(lines, {
+			strokeDashoffset: 0,
+			duration: 0.8,
+			stagger: 0.08,
+			ease: 'power2.inOut'
+		});
+
+		// Draw accent lines
+		tl.to(accentLines, {
+			strokeDashoffset: 0,
+			duration: 0.6,
+			stagger: 0.15,
+			ease: 'power2.inOut'
+		}, '-=0.4');
+
+		// Pop in nodes
+		tl.to(nodes, {
+			opacity: 1,
+			scale: 1,
+			duration: 0.4,
+			stagger: 0.05,
+			ease: 'back.out(1.7)'
+		}, '-=0.5');
+	}
 
 	/**
 	 * Animate stat numbers counting up when they enter the viewport.
