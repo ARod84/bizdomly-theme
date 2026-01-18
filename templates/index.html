@@ -1,0 +1,35 @@
+<!-- wp:template-part {"slug":"header","area":"header"} /-->
+
+<!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"120px","bottom":"80px"}}},"layout":{"type":"constrained","contentSize":"900px"}} -->
+<main class="wp-block-group" style="padding-top:120px;padding-bottom:80px">
+
+    <!-- wp:query {"queryId":1,"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true}} -->
+    <div class="wp-block-query">
+        <!-- wp:post-template -->
+            <!-- wp:group {"style":{"spacing":{"padding":{"bottom":"40px"},"margin":{"bottom":"40px"}},"border":{"bottom":{"color":"rgba(0,0,0,0.08)","width":"1px"}}},"layout":{"type":"constrained"}} -->
+            <div class="wp-block-group" style="border-bottom-color:rgba(0,0,0,0.08);border-bottom-width:1px;margin-bottom:40px;padding-bottom:40px">
+                <!-- wp:post-title {"isLink":true,"style":{"typography":{"fontWeight":"500"},"spacing":{"margin":{"bottom":"16px"}}},"fontSize":"large"} /-->
+                <!-- wp:post-excerpt {"moreText":"Read more →","style":{"typography":{"lineHeight":"1.7"}},"textColor":"gray"} /-->
+                <!-- wp:post-date {"style":{"typography":{"fontSize":"14px"},"spacing":{"margin":{"top":"16px"}}},"textColor":"light-gray"} /-->
+            </div>
+            <!-- /wp:group -->
+        <!-- /wp:post-template -->
+
+        <!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"}} -->
+            <!-- wp:query-pagination-previous /-->
+            <!-- wp:query-pagination-numbers /-->
+            <!-- wp:query-pagination-next /-->
+        <!-- /wp:query-pagination -->
+
+        <!-- wp:query-no-results -->
+            <!-- wp:paragraph {"align":"center","textColor":"gray"} -->
+            <p class="has-text-align-center has-gray-color has-text-color">No posts found.</p>
+            <!-- /wp:paragraph -->
+        <!-- /wp:query-no-results -->
+    </div>
+    <!-- /wp:query -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","area":"footer"} /-->

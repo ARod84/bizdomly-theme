@@ -1,0 +1,320 @@
+{
+    "$schema": "https://schemas.wp.org/wp/6.5/theme.json",
+    "version": 3,
+    "settings": {
+        "appearanceTools": true,
+        "color": {
+            "custom": true,
+            "customGradient": true,
+            "palette": [
+                {
+                    "slug": "black",
+                    "color": "#1a1a1a",
+                    "name": "Black"
+                },
+                {
+                    "slug": "dark-gray",
+                    "color": "#3a3a3a",
+                    "name": "Dark Gray"
+                },
+                {
+                    "slug": "gray",
+                    "color": "#555555",
+                    "name": "Gray"
+                },
+                {
+                    "slug": "light-gray",
+                    "color": "#888888",
+                    "name": "Light Gray"
+                },
+                {
+                    "slug": "background",
+                    "color": "#FAFAF9",
+                    "name": "Background"
+                },
+                {
+                    "slug": "white",
+                    "color": "#ffffff",
+                    "name": "White"
+                },
+                {
+                    "slug": "accent",
+                    "color": "#E0FF66",
+                    "name": "Accent"
+                }
+            ],
+            "gradients": [
+                {
+                    "slug": "black-gradient",
+                    "gradient": "linear-gradient(135deg, #1a1a1a 0%, #3a3a3a 100%)",
+                    "name": "Black Gradient"
+                }
+            ]
+        },
+        "typography": {
+            "fluid": true,
+            "fontFamilies": [
+                {
+                    "fontFamily": "'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif",
+                    "slug": "dm-sans",
+                    "name": "DM Sans",
+                    "fontFace": [
+                        {
+                            "fontFamily": "DM Sans",
+                            "fontWeight": "300 600",
+                            "fontStyle": "normal",
+                            "fontStretch": "normal",
+                            "src": ["file:./assets/fonts/DMSans-Variable.woff2"]
+                        },
+                        {
+                            "fontFamily": "DM Sans",
+                            "fontWeight": "400",
+                            "fontStyle": "italic",
+                            "fontStretch": "normal",
+                            "src": ["file:./assets/fonts/DMSans-Italic.woff2"]
+                        }
+                    ]
+                },
+                {
+                    "fontFamily": "'Instrument Serif', Georgia, serif",
+                    "slug": "instrument-serif",
+                    "name": "Instrument Serif",
+                    "fontFace": [
+                        {
+                            "fontFamily": "Instrument Serif",
+                            "fontWeight": "400",
+                            "fontStyle": "normal",
+                            "src": ["file:./assets/fonts/InstrumentSerif-Regular.woff2"]
+                        },
+                        {
+                            "fontFamily": "Instrument Serif",
+                            "fontWeight": "400",
+                            "fontStyle": "italic",
+                            "src": ["file:./assets/fonts/InstrumentSerif-Italic.woff2"]
+                        }
+                    ]
+                }
+            ],
+            "fontSizes": [
+                {
+                    "slug": "small",
+                    "size": "14px",
+                    "name": "Small"
+                },
+                {
+                    "slug": "medium",
+                    "size": "17px",
+                    "name": "Medium"
+                },
+                {
+                    "slug": "large",
+                    "size": "22px",
+                    "name": "Large"
+                },
+                {
+                    "slug": "x-large",
+                    "size": "clamp(36px, 5vw, 56px)",
+                    "name": "Extra Large"
+                },
+                {
+                    "slug": "xx-large",
+                    "size": "clamp(48px, 7vw, 84px)",
+                    "name": "Hero"
+                }
+            ]
+        },
+        "spacing": {
+            "padding": true,
+            "margin": true,
+            "units": ["px", "em", "rem", "%", "vh", "vw"],
+            "spacingSizes": [
+                {
+                    "slug": "10",
+                    "size": "10px",
+                    "name": "1"
+                },
+                {
+                    "slug": "20",
+                    "size": "20px",
+                    "name": "2"
+                },
+                {
+                    "slug": "30",
+                    "size": "30px",
+                    "name": "3"
+                },
+                {
+                    "slug": "40",
+                    "size": "48px",
+                    "name": "4"
+                },
+                {
+                    "slug": "50",
+                    "size": "80px",
+                    "name": "5"
+                },
+                {
+                    "slug": "60",
+                    "size": "120px",
+                    "name": "6"
+                }
+            ]
+        },
+        "layout": {
+            "contentSize": "900px",
+            "wideSize": "1200px"
+        },
+        "border": {
+            "color": true,
+            "radius": true,
+            "style": true,
+            "width": true
+        },
+        "shadow": {
+            "presets": [
+                {
+                    "slug": "card",
+                    "shadow": "0 20px 40px rgba(0,0,0,0.08)",
+                    "name": "Card"
+                },
+                {
+                    "slug": "button",
+                    "shadow": "0 8px 24px rgba(0,0,0,0.15)",
+                    "name": "Button"
+                }
+            ]
+        },
+        "useRootPaddingAwareAlignments": true
+    },
+    "styles": {
+        "color": {
+            "background": "var(--wp--preset--color--background)",
+            "text": "var(--wp--preset--color--black)"
+        },
+        "typography": {
+            "fontFamily": "var(--wp--preset--font-family--dm-sans)",
+            "fontSize": "var(--wp--preset--font-size--medium)",
+            "lineHeight": "1.6"
+        },
+        "spacing": {
+            "padding": {
+                "top": "0",
+                "right": "var(--wp--preset--spacing--40)",
+                "bottom": "0",
+                "left": "var(--wp--preset--spacing--40)"
+            }
+        },
+        "elements": {
+            "heading": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--instrument-serif)",
+                    "fontWeight": "400",
+                    "letterSpacing": "-0.02em",
+                    "lineHeight": "1.1"
+                },
+                "color": {
+                    "text": "var(--wp--preset--color--black)"
+                }
+            },
+            "h1": {
+                "typography": {
+                    "fontSize": "var(--wp--preset--font-size--xx-large)"
+                }
+            },
+            "h2": {
+                "typography": {
+                    "fontSize": "var(--wp--preset--font-size--x-large)"
+                }
+            },
+            "h3": {
+                "typography": {
+                    "fontSize": "var(--wp--preset--font-size--large)"
+                }
+            },
+            "link": {
+                "color": {
+                    "text": "var(--wp--preset--color--black)"
+                },
+                ":hover": {
+                    "color": {
+                        "text": "var(--wp--preset--color--dark-gray)"
+                    }
+                }
+            },
+            "button": {
+                "border": {
+                    "radius": "8px"
+                },
+                "color": {
+                    "background": "var(--wp--preset--color--black)",
+                    "text": "var(--wp--preset--color--white)"
+                },
+                "typography": {
+                    "fontSize": "14px",
+                    "fontWeight": "500"
+                },
+                "spacing": {
+                    "padding": {
+                        "top": "12px",
+                        "right": "24px",
+                        "bottom": "12px",
+                        "left": "24px"
+                    }
+                },
+                ":hover": {
+                    "color": {
+                        "background": "var(--wp--preset--color--dark-gray)"
+                    }
+                }
+            }
+        },
+        "blocks": {
+            "core/group": {
+                "spacing": {
+                    "padding": {
+                        "top": "0",
+                        "right": "0",
+                        "bottom": "0",
+                        "left": "0"
+                    }
+                }
+            },
+            "core/navigation": {
+                "typography": {
+                    "fontSize": "14px",
+                    "fontWeight": "400"
+                },
+                "spacing": {
+                    "blockGap": "40px"
+                }
+            },
+            "core/site-title": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--dm-sans)",
+                    "fontSize": "20px",
+                    "fontWeight": "500",
+                    "letterSpacing": "-0.5px"
+                }
+            }
+        }
+    },
+    "templateParts": [
+        {
+            "name": "header",
+            "title": "Header",
+            "area": "header"
+        },
+        {
+            "name": "footer",
+            "title": "Footer",
+            "area": "footer"
+        }
+    ],
+    "customTemplates": [
+        {
+            "name": "blank",
+            "title": "Blank",
+            "postTypes": ["page", "post"]
+        }
+    ]
+}

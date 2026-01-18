@@ -1,0 +1,16 @@
+{
+	"name": "bizdomly/theme",
+	"description": "Bizdomly WordPress Block Theme",
+	"type": "wordpress-theme",
+	"license": "GPL-2.0-or-later",
+	"require": {
+		"php": ">=8.0"
+	},
+	"require-dev": {
+		"php-stubs/wordpress-stubs": "^6.4"
+	},
+	"config": {
+		"allow-plugins": false,
+		"sort-packages": true
+	}
+}
