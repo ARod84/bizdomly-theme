@@ -325,6 +325,11 @@
             "name": "page-services",
             "title": "Services",
             "postTypes": ["page"]
+        },
+        {
+            "name": "page-ghostwriter",
+            "title": "Ghostwriter",
+            "postTypes": ["page"]
         }
     ]
 }
