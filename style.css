@@ -1276,13 +1276,13 @@ html[data-theme="dark"] .mobile-nav-link {
 }
 
 html[data-theme="dark"] .mobile-nav-link:hover {
-    color: #1a1a1a;
+    color: #1a1a1a !important;
     background: #E0FF66;
 }
 
 html[data-theme="dark"] .mobile-nav-cta {
-    color: #1a1a1a;
-    background: #E0FF66;
+    color: #1a1a1a !important;
+    background: #E0FF66 !important;
 }
 
 html[data-theme="dark"] .mobile-dropdown-toggle {
@@ -1313,8 +1313,8 @@ html[data-theme="dark"] .dropdown-menu a:hover {
 }
 
 html[data-theme="dark"] .nav-cta {
-    background: #E0FF66;
-    color: #1a1a1a;
+    background: #E0FF66 !important;
+    color: #1a1a1a !important;
 }
 
 /* Dark Mode Toggle Button */
@@ -1390,6 +1390,14 @@ html[data-theme="dark"] .wp-block-button__link.has-black-background-color,
 html[data-theme="dark"] .wp-element-button {
     background: #f5f5f5 !important;
     color: #141414 !important;
+}
+
+/* Ensure lime/accent buttons always have dark text for contrast */
+html[data-theme="dark"] .wp-block-button__link.has-accent-background-color,
+html[data-theme="dark"] .has-accent-background-color,
+html[data-theme="dark"] [style*="background-color:#E0FF66"],
+html[data-theme="dark"] [style*="background:#E0FF66"] {
+    color: #1a1a1a !important;
 }
 
 html[data-theme="dark"] .btn-secondary {
@@ -1506,13 +1514,13 @@ html[data-theme="dark"] .blog-post-card .wp-block-post-title a:hover {
 }
 
 html[data-theme="dark"] .blog-category-tag a {
-    background: #E0FF66;
-    color: #1a1a1a;
+    background: #E0FF66 !important;
+    color: #1a1a1a !important;
 }
 
 html[data-theme="dark"] .blog-category-tag a:hover {
-    background: #f5f5f5;
-    color: #1a1a1a;
+    background: #f5f5f5 !important;
+    color: #1a1a1a !important;
 }
 
 html[data-theme="dark"] .wp-block-read-more {
