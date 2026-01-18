@@ -41,6 +41,11 @@
                     "slug": "accent",
                     "color": "#E0FF66",
                     "name": "Accent"
+                },
+                {
+                    "slug": "border",
+                    "color": "rgba(0, 0, 0, 0.08)",
+                    "name": "Border"
                 }
             ],
             "gradients": [
@@ -315,6 +320,11 @@
             "name": "blank",
             "title": "Blank",
             "postTypes": ["page", "post"]
+        },
+        {
+            "name": "page-services",
+            "title": "Services",
+            "postTypes": ["page"]
         }
     ]
 }

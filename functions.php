@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'BIZDOMLY_VERSION', '1.2.1' );
+define( 'BIZDOMLY_VERSION', '1.3.0' );
 define( 'BIZDOMLY_DIR', get_template_directory() );
 define( 'BIZDOMLY_URI', get_template_directory_uri() );
 
