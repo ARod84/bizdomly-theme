@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'BIZDOMLY_VERSION', '1.0.0' );
+define( 'BIZDOMLY_VERSION', '1.1.5' );
 define( 'BIZDOMLY_DIR', get_template_directory() );
 define( 'BIZDOMLY_URI', get_template_directory_uri() );
 
@@ -74,12 +74,37 @@ add_action( 'wp_enqueue_scripts', 'bizdomly_enqueue_fonts' );
 add_action( 'enqueue_block_editor_assets', 'bizdomly_enqueue_fonts' );
 
 /**
+ * Enqueues the theme stylesheet.
+ *
+ * @since 1.0.0
+ * @return void
+ */
+function bizdomly_enqueue_styles() {
+	wp_enqueue_style(
+		'bizdomly-style',
+		get_stylesheet_uri(),
+		array(),
+		BIZDOMLY_VERSION
+	);
+}
+add_action( 'wp_enqueue_scripts', 'bizdomly_enqueue_styles' );
+
+/**
  * Enqueues theme scripts for the front end.
  *
  * @since 1.0.0
  * @return void
  */
 function bizdomly_enqueue_scripts() {
+	// Dark mode script - loaded in head to prevent flash.
+	wp_enqueue_script(
+		'bizdomly-dark-mode',
+		BIZDOMLY_URI . '/assets/js/dark-mode.js',
+		array(),
+		BIZDOMLY_VERSION,
+		false
+	);
+
 	wp_enqueue_script(
 		'bizdomly-header',
 		BIZDOMLY_URI . '/assets/js/header.js',

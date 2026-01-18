@@ -14,34 +14,5 @@
 	document.addEventListener('DOMContentLoaded', function () {
 		// Register ScrollTrigger plugin
 		gsap.registerPlugin(ScrollTrigger);
-
-		// Initialize heading underline animations
-		initHeadingUnderlines();
 	});
-
-	/**
-	 * Animate accent underlines on h1 and h2 headings when they enter viewport.
-	 */
-	function initHeadingUnderlines() {
-		const headings = document.querySelectorAll('h1, h2');
-
-		headings.forEach(function (heading) {
-			// Create a proxy object for GSAP to animate
-			const proxy = { scale: 0 };
-
-			gsap.to(proxy, {
-				scale: 1,
-				duration: 0.8,
-				ease: 'power2.out',
-				scrollTrigger: {
-					trigger: heading,
-					start: 'top 80%',
-					toggleActions: 'play none none none'
-				},
-				onUpdate: function () {
-					heading.style.setProperty('--underline-scale', proxy.scale);
-				}
-			});
-		});
-	}
 })();
