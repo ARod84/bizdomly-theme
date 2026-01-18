@@ -21,7 +21,7 @@
 	});
 
 	/**
-	 * Animate hero SVG with line drawing.
+	 * Animate hero SVG with line drawing on scroll.
 	 */
 	function initHeroSvg() {
 		const heroSvg = document.querySelector('.hero-svg-container');
@@ -53,8 +53,14 @@
 		// Hide nodes initially
 		gsap.set(nodes, { opacity: 0, scale: 0 });
 
-		// Create timeline - plays on load with slight delay
-		var tl = gsap.timeline({ delay: 0.5 });
+		// Create timeline with scroll trigger
+		var tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: heroSvg,
+				start: 'top 85%',
+				toggleActions: 'play none none none'
+			}
+		});
 
 		// Draw regular lines
 		tl.to(lines, {

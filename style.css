@@ -305,11 +305,29 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-title {
     font-family: 'Instrument Serif', Georgia, serif;
-    font-size: clamp(48px, 7vw, 84px);
+    font-size: clamp(42px, 5.5vw, 84px);
     font-weight: 400;
     line-height: 1.05;
     letter-spacing: -2px;
     margin-bottom: 32px;
+}
+
+.hero-title.has-xx-large-font-size {
+    font-size: clamp(42px, 5.5vw, 84px) !important;
+}
+
+@media (max-width: 1280px) {
+    .hero-title,
+    .hero-title.has-xx-large-font-size {
+        font-size: 54px !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero-title,
+    .hero-title.has-xx-large-font-size {
+        font-size: 46px !important;
+    }
 }
 
 .hero-title em {
@@ -805,6 +823,37 @@ html[data-theme="dark"] .service-detail-section:not(.ai-section) .feature-item {
     display: block;
 }
 
+/* Mini decorative SVGs */
+.hero-mini-svg {
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-mini-svg svg {
+    width: 100%;
+    height: 100%;
+}
+
+.hero-mini-svg-1 {
+    bottom: 10%;
+    left: 5%;
+}
+
+.hero-mini-svg-2 {
+    top: 15%;
+    left: 35%;
+}
+
+@media (max-width: 782px) {
+    .hero-mini-svg {
+        display: none;
+    }
+}
+
 /* SVG Floating animations */
 @keyframes hn-float1 {
     0%, 100% { transform: translate(0, 0); }
@@ -850,12 +899,46 @@ html[data-theme="dark"] .hero-svg-container .hn-line {
 }
 
 /* Responsive adjustments for hero columns */
+@media (max-width: 1200px) {
+    .hero-section .wp-block-columns {
+        gap: 40px !important;
+    }
+
+    .hero-section .wp-block-column:first-child {
+        flex-basis: 60% !important;
+    }
+
+    .hero-section .wp-block-column:last-child {
+        flex-basis: 40% !important;
+    }
+
+    .hero-svg-container {
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero-section .wp-block-column:first-child {
+        flex-basis: 65% !important;
+    }
+
+    .hero-section .wp-block-column:last-child {
+        flex-basis: 35% !important;
+    }
+
+    .hero-svg-container {
+        max-width: 280px;
+    }
+}
+
 @media (max-width: 782px) {
     .hero-section .wp-block-columns {
         flex-direction: column-reverse;
     }
 
-    .hero-section .wp-block-column {
+    .hero-section .wp-block-column,
+    .hero-section .wp-block-column:first-child,
+    .hero-section .wp-block-column:last-child {
         flex-basis: 100% !important;
     }
 
