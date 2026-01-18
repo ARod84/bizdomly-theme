@@ -748,3 +748,46 @@ html[data-theme="dark"] .has-background-background-color {
     background: #141414 !important;
     background-color: #141414 !important;
 }
+
+/* Services Page - AI Section (always dark background) */
+.ai-section,
+.ai-section p,
+.ai-section h2,
+.ai-section h3,
+.ai-section .feature-item p {
+    color: #ffffff !important;
+}
+
+.ai-section .has-light-gray-color {
+    color: #b0b0b0 !important;
+}
+
+.ai-section .has-accent-color {
+    color: #E0FF66 !important;
+}
+
+/* Services Page - Light sections text colors */
+.service-detail-section:not(.ai-section) p,
+.service-detail-section:not(.ai-section) .feature-item p {
+    color: var(--bizdomly-black);
+}
+
+html[data-theme="dark"] .service-detail-section:not(.ai-section) {
+    background: #1a1a1a !important;
+}
+
+html[data-theme="dark"] .service-detail-section:not(.ai-section) p,
+html[data-theme="dark"] .service-detail-section:not(.ai-section) h2,
+html[data-theme="dark"] .service-detail-section:not(.ai-section) h3,
+html[data-theme="dark"] .service-detail-section:not(.ai-section) .feature-item p {
+    color: #f5f5f5 !important;
+}
+
+html[data-theme="dark"] .service-detail-section:not(.ai-section) .has-gray-color,
+html[data-theme="dark"] .service-detail-section:not(.ai-section) .has-light-gray-color {
+    color: #b0b0b0 !important;
+}
+
+html[data-theme="dark"] .service-detail-section:not(.ai-section) .feature-item {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
