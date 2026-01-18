@@ -81,11 +81,17 @@
 			// Find the header navigation area and append toggle
 			const header = document.querySelector('.site-header');
 			if (header) {
-				const lastGroup = header.querySelector('.wp-block-group:last-child');
-				if (lastGroup) {
-					lastGroup.appendChild(createToggleButton());
+				const mobileToggle = header.querySelector('.mobile-menu-toggle');
+				if (mobileToggle) {
+					// Insert before hamburger so order is: dark toggle, hamburger
+					mobileToggle.parentNode.insertBefore(createToggleButton(), mobileToggle);
 				} else {
-					header.appendChild(createToggleButton());
+					const lastGroup = header.querySelector('.wp-block-group:last-child');
+					if (lastGroup) {
+						lastGroup.appendChild(createToggleButton());
+					} else {
+						header.appendChild(createToggleButton());
+					}
 				}
 			}
 		});
