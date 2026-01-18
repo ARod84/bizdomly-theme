@@ -87,6 +87,33 @@ function bizdomly_enqueue_scripts() {
 		BIZDOMLY_VERSION,
 		true
 	);
+
+	// GSAP Core.
+	wp_enqueue_script(
+		'gsap',
+		'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js',
+		array(),
+		'3.12.5',
+		true
+	);
+
+	// GSAP ScrollTrigger plugin.
+	wp_enqueue_script(
+		'gsap-scrolltrigger',
+		'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js',
+		array( 'gsap' ),
+		'3.12.5',
+		true
+	);
+
+	// Theme animations.
+	wp_enqueue_script(
+		'bizdomly-animations',
+		BIZDOMLY_URI . '/assets/js/animations.js',
+		array( 'gsap', 'gsap-scrolltrigger' ),
+		BIZDOMLY_VERSION,
+		true
+	);
 }
 add_action( 'wp_enqueue_scripts', 'bizdomly_enqueue_scripts' );
 
@@ -174,7 +201,7 @@ function bizdomly_get_block_styles_css() {
 
 .wp-block-button.is-style-bizdomly-primary .wp-block-button__link:hover {
 	transform: translateY(-2px);
-	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15), 0 0 0 2px #E0FF66;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .wp-block-button.is-style-bizdomly-secondary .wp-block-button__link {
@@ -216,7 +243,6 @@ function bizdomly_get_block_styles_css() {
 	transform: translateY(-4px);
 	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 	background: #fafaf9;
-	border-color: #E0FF66;
 }
 CSS;
 }
