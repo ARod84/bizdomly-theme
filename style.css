@@ -23,6 +23,45 @@ Bizdomly - Ecommerce Development Company Theme
     box-sizing: border-box;
 }
 
+/* Ensure proper layout */
+.wp-site-blocks {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    column-count: unset !important;
+    columns: unset !important;
+}
+
+.wp-site-blocks > * {
+    display: block;
+    max-width: 100%;
+    column-count: unset !important;
+    columns: unset !important;
+}
+
+body,
+html {
+    column-count: unset !important;
+    columns: unset !important;
+}
+
+main.wp-block-group {
+    display: block !important;
+    column-count: unset !important;
+    columns: unset !important;
+}
+
+.wp-block-group.hero-section,
+.wp-block-group.services-section,
+.wp-block-group.stats-section,
+.wp-block-group.cta-section {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    column-count: unset !important;
+    columns: unset !important;
+}
+
 /* Custom Properties - mirroring theme.json for CSS usage */
 :root {
     --bizdomly-black: #1a1a1a;
