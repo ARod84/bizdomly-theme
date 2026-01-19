@@ -2018,6 +2018,17 @@ html[data-theme="dark"] .hero-svg-container .hn-line {
 
 .pricing-card.featured {
     position: relative;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pricing-card.featured:hover {
+    background: #E0FF66 !important;
+}
+
+.pricing-card.featured:hover p,
+.pricing-card.featured:hover h3,
+.pricing-card.featured:hover span {
+    color: #1a1a1a !important;
 }
 
 .pricing-card.featured::before {
@@ -2211,6 +2222,16 @@ html[data-theme="dark"] .pricing-card:hover {
 
 html[data-theme="dark"] .pricing-card.featured {
     border-color: #E0FF66 !important;
+}
+
+html[data-theme="dark"] .pricing-card.featured:hover {
+    background: #E0FF66 !important;
+}
+
+html[data-theme="dark"] .pricing-card.featured:hover p,
+html[data-theme="dark"] .pricing-card.featured:hover h3,
+html[data-theme="dark"] .pricing-card.featured:hover span {
+    color: #1a1a1a !important;
 }
 
 html[data-theme="dark"] .testimonial-card {
@@ -2709,5 +2730,65 @@ html[data-theme="dark"] .testimonials-section {
 }
 
 html[data-theme="dark"] .testimonials-section .testimonial-card {
+    background: #1e1e1e !important;
+}
+
+/* ===================
+   Contact Page Styles
+   =================== */
+
+.contact-form-card {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.contact-step {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.contact-step:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Contact page responsive */
+@media (max-width: 782px) {
+    .contact-hero {
+        padding-top: 120px !important;
+    }
+
+    .contact-form-card {
+        padding: 32px 24px !important;
+    }
+
+    .contact-info-section .wp-block-columns,
+    .contact-direct-section .wp-block-columns {
+        flex-direction: column;
+        gap: 24px;
+    }
+}
+
+/* Dark mode - Contact page */
+html[data-theme="dark"] .contact-form-card {
+    background: #1e1e1e !important;
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+html[data-theme="dark"] .contact-step {
+    background: #1e1e1e !important;
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="dark"] .contact-step:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+html[data-theme="dark"] .contact-info-section {
+    background: #1a1a1a !important;
+}
+
+html[data-theme="dark"] .contact-direct-section {
     background: #1e1e1e !important;
 }
