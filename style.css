@@ -2234,3 +2234,449 @@ html[data-theme="dark"] .ghostwriter-pricing {
 html[data-theme="dark"] .ghostwriter-testimonials {
     background: #141414 !important;
 }
+
+/* ===================
+   Bizdomly Ecommerce Page Styles
+   =================== */
+
+/* Coming Soon Badge */
+.coming-soon-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    background: linear-gradient(135deg, rgba(224, 255, 102, 0.15) 0%, rgba(224, 255, 102, 0.05) 100%);
+    border: 1px solid rgba(224, 255, 102, 0.3);
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #1a1a1a;
+    margin-bottom: 24px;
+}
+
+html[data-theme="dark"] .coming-soon-badge {
+    color: #E0FF66;
+    background: linear-gradient(135deg, rgba(224, 255, 102, 0.2) 0%, rgba(224, 255, 102, 0.05) 100%);
+}
+
+/* Ecommerce Hero Visual */
+.ecom-hero-visual {
+    position: relative;
+    padding: 30px;
+}
+
+.ecom-chart {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+html[data-theme="dark"] .ecom-chart {
+    background: #1e1e1e;
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.chart-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+html[data-theme="dark"] .chart-title {
+    color: #f5f5f5;
+}
+
+.chart-badge {
+    font-size: 12px;
+    font-weight: 600;
+    color: #22c55e;
+    background: rgba(34, 197, 94, 0.1);
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.chart-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    height: 140px;
+    padding-top: 10px;
+}
+
+.chart-bar {
+    flex: 1;
+    border-radius: 8px 8px 0 0;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.chart-bar:nth-child(1) { height: 45%; background: #e5e5e5; }
+.chart-bar:nth-child(2) { height: 60%; background: #d4d4d4; }
+.chart-bar:nth-child(3) { height: 50%; background: #e5e5e5; }
+.chart-bar:nth-child(4) { height: 75%; background: #d4d4d4; }
+.chart-bar:nth-child(5) { height: 65%; background: #e5e5e5; }
+.chart-bar:nth-child(6) { height: 85%; background: #E0FF66; }
+.chart-bar:nth-child(7) { height: 95%; background: linear-gradient(to top, #E0FF66 0%, #c4e055 100%); }
+
+html[data-theme="dark"] .chart-bar:nth-child(1) { background: #333; }
+html[data-theme="dark"] .chart-bar:nth-child(2) { background: #404040; }
+html[data-theme="dark"] .chart-bar:nth-child(3) { background: #333; }
+html[data-theme="dark"] .chart-bar:nth-child(4) { background: #404040; }
+html[data-theme="dark"] .chart-bar:nth-child(5) { background: #333; }
+
+/* Floating Cards */
+.floating-card {
+    position: absolute;
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    animation: float 6s ease-in-out infinite;
+}
+
+html[data-theme="dark"] .floating-card {
+    background: #252525;
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.floating-card-1 {
+    top: 0;
+    right: 0;
+    animation-delay: 0s;
+}
+
+.floating-card-2 {
+    bottom: 20px;
+    left: 0;
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.floating-icon {
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+.floating-label {
+    font-size: 11px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+html[data-theme="dark"] .floating-label {
+    color: #999;
+}
+
+.floating-value {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+html[data-theme="dark"] .floating-value {
+    color: #f5f5f5;
+}
+
+.floating-value.positive {
+    color: #22c55e;
+}
+
+/* Ecommerce Feature Cards */
+.ecom-feature-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.ecom-feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+html[data-theme="dark"] .ecom-feature-card {
+    background: #1e1e1e !important;
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="dark"] .ecom-feature-card:hover {
+    background: #252525 !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.ecom-feature-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(224, 255, 102, 0.2) 0%, rgba(224, 255, 102, 0.05) 100%);
+    border-radius: 14px;
+    font-size: 24px;
+}
+
+/* Intelligence Loop Section */
+.intelligence-loop {
+    position: relative;
+}
+
+.loop-step {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.loop-step:hover {
+    transform: translateY(-4px);
+}
+
+.loop-number {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: #fff;
+    margin: 0 auto 20px;
+}
+
+.loop-step:hover .loop-number {
+    background: #E0FF66;
+    color: #1a1a1a;
+}
+
+.loop-connector {
+    position: absolute;
+    top: 50%;
+    left: 33.33%;
+    width: 33.33%;
+    height: 2px;
+    background: linear-gradient(to right, rgba(224, 255, 102, 0.3), rgba(224, 255, 102, 0.6), rgba(224, 255, 102, 0.3));
+}
+
+.loop-connector::before,
+.loop-connector::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    background: #E0FF66;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.loop-connector::before {
+    left: 0;
+}
+
+.loop-connector::after {
+    right: 0;
+}
+
+/* Audience Cards */
+.audience-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    position: relative;
+    overflow: hidden;
+}
+
+.audience-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #E0FF66 0%, #c4e055 100%);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.audience-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.audience-card:hover::before {
+    transform: scaleX(1);
+}
+
+html[data-theme="dark"] .audience-card {
+    background: #1e1e1e !important;
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="dark"] .audience-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.audience-icon {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+    border-radius: 16px;
+    font-size: 28px;
+    margin-bottom: 24px;
+}
+
+html[data-theme="dark"] .audience-icon {
+    background: linear-gradient(135deg, #2a2a2a 0%, #333333 100%);
+}
+
+.audience-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.audience-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    font-size: 15px;
+    color: #555;
+}
+
+html[data-theme="dark"] .audience-features li {
+    color: #b0b0b0;
+}
+
+.audience-features li::before {
+    content: '✓';
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background: rgba(224, 255, 102, 0.2);
+    border-radius: 50%;
+    font-size: 11px;
+    color: #1a1a1a;
+}
+
+html[data-theme="dark"] .audience-features li::before {
+    color: #E0FF66;
+    background: rgba(224, 255, 102, 0.15);
+}
+
+/* Waitlist CTA Section */
+.waitlist-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.waitlist-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 50%, rgba(224, 255, 102, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.launching-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    background: rgba(224, 255, 102, 0.15);
+    border: 1px solid rgba(224, 255, 102, 0.3);
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #fff;
+}
+
+/* Ecommerce Page Responsive */
+@media (max-width: 1024px) {
+    .ecom-hero .wp-block-columns {
+        gap: 40px !important;
+    }
+
+    .ecom-built-for .wp-block-columns {
+        flex-direction: column;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 782px) {
+    .ecom-hero {
+        min-height: auto;
+        padding-top: 100px !important;
+    }
+
+    .ecom-hero .wp-block-columns {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .ecom-hero-visual {
+        padding: 20px;
+    }
+
+    .floating-card {
+        display: none;
+    }
+
+    .ecom-features .wp-block-columns {
+        flex-direction: column;
+    }
+
+    .intelligence-loop .wp-block-columns {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .loop-connector {
+        display: none;
+    }
+}
+
+/* Dark Mode - Bizdomly Ecommerce Page */
+html[data-theme="dark"] .ecom-hero {
+    background: #141414 !important;
+}
+
+html[data-theme="dark"] .ecom-features {
+    background: #1a1a1a !important;
+}
+
+html[data-theme="dark"] .ecom-how-it-works {
+    background: #1e1e1e !important;
+}
+
+html[data-theme="dark"] .ecom-built-for {
+    background: #141414 !important;
+}
+
+html[data-theme="dark"] .waitlist-section {
+    background: #1a1a1a !important;
+}

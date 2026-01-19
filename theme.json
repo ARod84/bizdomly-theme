@@ -330,6 +330,11 @@
             "name": "page-ghostwriter",
             "title": "Ghostwriter",
             "postTypes": ["page"]
+        },
+        {
+            "name": "page-bizdomly-ecommerce",
+            "title": "Bizdomly Ecommerce",
+            "postTypes": ["page"]
         }
     ]
 }
