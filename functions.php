@@ -156,14 +156,6 @@ function bizdomly_register_pattern_category() {
 			'description' => __( 'Patterns for Bizdomly theme', 'bizdomly' ),
 		)
 	);
-
-	register_block_pattern_category(
-		'ghostwriter',
-		array(
-			'label'       => __( 'Ghostwriter', 'bizdomly' ),
-			'description' => __( 'Patterns for Ghostwriter landing page', 'bizdomly' ),
-		)
-	);
 }
 add_action( 'init', 'bizdomly_register_pattern_category' );
 
