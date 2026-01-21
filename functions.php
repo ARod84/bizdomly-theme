@@ -283,3 +283,100 @@ function bizdomly_enqueue_block_styles_css() {
 }
 add_action( 'wp_enqueue_scripts', 'bizdomly_enqueue_block_styles_css', 20 );
 
+/**
+ * Add WooCommerce support.
+ *
+ * @since 1.4.0
+ * @return void
+ */
+function bizdomly_woocommerce_setup() {
+	add_theme_support(
+		'woocommerce',
+		array(
+			'thumbnail_image_width' => 400,
+			'single_image_width'    => 600,
+			'product_grid'          => array(
+				'default_rows'    => 3,
+				'default_columns' => 3,
+				'max_columns'     => 4,
+			),
+		)
+	);
+
+	// Product gallery features.
+	add_theme_support( 'wc-product-gallery-zoom' );
+	add_theme_support( 'wc-product-gallery-lightbox' );
+	add_theme_support( 'wc-product-gallery-slider' );
+}
+add_action( 'after_setup_theme', 'bizdomly_woocommerce_setup' );
+
+/**
+ * Modify WooCommerce wrapper markup.
+ *
+ * @since 1.4.0
+ * @return void
+ */
+function bizdomly_woocommerce_wrapper_before() {
+	echo '<main class="wp-block-group woocommerce-page" style="padding-top:0;padding-bottom:0">';
+	echo '<div class="wp-block-group alignwide" style="max-width:1200px;margin:0 auto">';
+}
+
+/**
+ * Close WooCommerce wrapper markup.
+ *
+ * @since 1.4.0
+ * @return void
+ */
+function bizdomly_woocommerce_wrapper_after() {
+	echo '</div>';
+	echo '</main>';
+}
+
+// Only add wrapper hooks if WooCommerce is active.
+if ( class_exists( 'WooCommerce' ) ) {
+	remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
+	remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
+	add_action( 'woocommerce_before_main_content', 'bizdomly_woocommerce_wrapper_before' );
+	add_action( 'woocommerce_after_main_content', 'bizdomly_woocommerce_wrapper_after' );
+}
+
+/**
+ * Shortcode to display product features from ACF fields.
+ *
+ * @since 1.4.0
+ * @return string The features list HTML.
+ */
+function bizdomly_product_features_shortcode() {
+	if ( ! function_exists( 'get_field' ) ) {
+		return '';
+	}
+
+	$features = array();
+	for ( $i = 1; $i <= 7; $i++ ) {
+		$feature = get_field( 'feature_' . $i );
+		if ( ! empty( $feature ) ) {
+			$features[] = $feature;
+		}
+	}
+
+	if ( empty( $features ) ) {
+		return '';
+	}
+
+	$output = '<div class="wp-block-group product-features has-border-color has-background-background-color has-background" style="border-color:#e5e5e5;border-width:1px;border-radius:12px;margin-bottom:32px;padding-top:20px;padding-right:24px;padding-bottom:20px;padding-left:24px">';
+	$output .= '<h4 class="wp-block-heading has-black-color has-text-color" style="margin-bottom:16px;font-size:15px;font-weight:600;letter-spacing:1px;text-transform:uppercase">What\'s Included</h4>';
+
+	foreach ( $features as $index => $feature ) {
+		$margin = $index < count( $features ) - 1 ? 'margin-bottom:12px' : '';
+		$output .= '<div class="wp-block-group feature-item" style="display:flex;flex-wrap:nowrap;align-items:center;gap:12px;' . $margin . '">';
+		$output .= '<p style="font-size:18px;margin:0">✓</p>';
+		$output .= '<p class="has-gray-color has-text-color" style="font-size:15px;margin:0">' . esc_html( $feature ) . '</p>';
+		$output .= '</div>';
+	}
+
+	$output .= '</div>';
+
+	return $output;
+}
+add_shortcode( 'product_features', 'bizdomly_product_features_shortcode' );
+
