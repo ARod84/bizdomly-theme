@@ -3946,3 +3946,16 @@ html[data-theme="dark"] .product-features .feature-item p:last-child {
     margin: 0;
     line-height: 1;
 }
+
+/* FAQ and checklist dark text fixes */
+.faq-question {
+    color: var(--bizdomly-black) !important;
+}
+
+.faq-answer p {
+    color: var(--bizdomly-black) !important;
+}
+
+.checklist-icon p {
+    color: var(--bizdomly-black) !important;
+}
