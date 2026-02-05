@@ -300,6 +300,39 @@
                     "fontWeight": "500",
                     "letterSpacing": "-0.5px"
                 }
+            },
+            "woocommerce/product-image": {
+                "border": {
+                    "radius": "16px"
+                }
+            },
+            "woocommerce/product-title": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--dm-sans)",
+                    "fontSize": "18px",
+                    "fontWeight": "500"
+                }
+            },
+            "woocommerce/product-price": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--dm-sans)",
+                    "fontSize": "16px",
+                    "fontWeight": "600"
+                }
+            },
+            "woocommerce/product-button": {
+                "border": {
+                    "radius": "10px"
+                },
+                "typography": {
+                    "fontSize": "14px",
+                    "fontWeight": "500"
+                }
+            },
+            "woocommerce/mini-cart": {
+                "typography": {
+                    "fontSize": "14px"
+                }
             }
         }
     },
@@ -339,6 +372,21 @@
         {
             "name": "page-contact",
             "title": "Contact",
+            "postTypes": ["page"]
+        },
+        {
+            "name": "page-cart",
+            "title": "Cart",
+            "postTypes": ["page"]
+        },
+        {
+            "name": "page-checkout",
+            "title": "Checkout",
+            "postTypes": ["page"]
+        },
+        {
+            "name": "page-openclaw",
+            "title": "OpenClaw",
             "postTypes": ["page"]
         }
     ]
