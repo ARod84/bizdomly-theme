@@ -3959,3 +3959,28 @@ html[data-theme="dark"] .product-features .feature-item p:last-child {
 .checklist-icon p {
     color: var(--bizdomly-black) !important;
 }
+
+/* Force light theme styles for FAQ and checklist in dark mode */
+html[data-theme="dark"] .faq-item {
+    background: var(--bizdomly-white);
+}
+
+html[data-theme="dark"] .faq-question {
+    color: var(--bizdomly-black) !important;
+}
+
+html[data-theme="dark"] .faq-question::after {
+    color: var(--bizdomly-light-gray);
+}
+
+html[data-theme="dark"] .faq-answer p {
+    color: var(--bizdomly-black) !important;
+}
+
+html[data-theme="dark"] .checklist-icon {
+    background-color: var(--bizdomly-accent) !important;
+}
+
+html[data-theme="dark"] .checklist-icon p {
+    color: var(--bizdomly-black) !important;
+}
